@@ -1,0 +1,12 @@
+server:
+    port: 2222
+
+spring:
+    thymeleaf:
+        prefix: classpath:/templates/
+    application:
+        name: web-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/

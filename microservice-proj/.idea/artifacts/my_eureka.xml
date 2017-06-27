@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="my_eureka">
+    <output-path>$PROJECT_DIR$/../test/out/artifacts/my_eureka/target</output-path>
+    <root id="archive" name="my_eureka.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../test/my_eureka/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

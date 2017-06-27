@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>学生选课系统</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+<div class="header_logo">
+    <div class="header_logo_con">
+        <h1 class="h1_logo">学生选课系统</h1>
+    </div>
+</div>
+
+<div class="main">
+    <div class="mainCon">
+        <div class="leftLoginIntro">
+            <h2>系统使用说明</h2>
+
+
+
+            <table width="360" class="login_intro_table">
+                <tr>
+                    <td align="left" valign="top" class="text12"><span class="style1">1、</span></td>
+                    <td align="left" valign="top" class="text12">使用本平台的学生需要以真实的学号进行登录。</td>
+                </tr>
+                <!--tr>
+                    <a title="Spring IO" href="http://www.baidu.com"><img height="50"
+                     src="spring-trans.png" /></a>
+                </tr-->
+
+            </table>
+
+        </div>
+
+
+        <div class="rightLoginContent">
+
+            <div class="loginBox">
+                <h2>用户登录</h2>
+                <form th:action="@{/loginid}" type="POST">
+                    <input type="hidden" name="doLogin" value="true"/>
+                    <h3>用户名或学号</h3> <br/>
+                    <input type="text" name="username" th:value=" ${username} " class="inputBox"/>
+                    <br/>
+                    <h3>密码</h3>
+                    <br/>
+                    <!--input type="password" id="password_shadow" name="password_shadow" class="inputBox" value="" onfocus="focus_password();"/-->
+                    <input type="password" name="password" th:value="${password}" class="inputBox" onblur="blur_password();"/>
+                    <input type="submit" name="submitButton" value="Submit" class="login_button"/>
+                </form>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+</body>
+
+
+
+</html>

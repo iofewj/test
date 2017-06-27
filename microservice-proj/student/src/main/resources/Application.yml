@@ -1,0 +1,15 @@
+server:
+  port: 4444
+
+spring:
+  application:
+    name: student-server
+  data:
+      mongodb:
+        host: localhost
+        port: 27017
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/

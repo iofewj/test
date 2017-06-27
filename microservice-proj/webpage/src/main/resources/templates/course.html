@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org" xmlns:c="http://www.w3.org/1999/XSL/Transform">
+<link rel="stylesheet" href="/style.css" />
+
+<head>
+	<title>学生选课系统</title>
+	<link rel="stylesheet" href="/style.css" />
+</head>
+
+
+
+<body>
+<div class="header_logo">
+<div class="header_logo_con">
+<h1 class="h1_logo">学生选课系统</h1>
+</div>
+</div>
+<div class="header_login_info">
+<div class="header_login_info_con">
+<span class="fl welcome_info">课程列表</span>
+</div>
+</div>
+
+<div class="main">
+<div class="mainCon">
+<div class="leftNav">
+<ul>
+<li><a id="Nav_begin" class="leftNav_li" href="/student">已选课程</a></li>
+<!--<li><span class=leftNav_block></span></li>-->
+
+
+<li><a id="Nav_profile" class="leftNav_li" >其他课程</a></li>
+
+	<script language="javascript">
+                var class_name = "Nav_"+"profile";
+
+                document.getElementById(class_name).className=document.getElementById(class_name).className+"_selected";
+
+     </script>
+
+
+<!--</span>-->
+</ul>
+</div>
+
+
+	<center>
+<form th:action="@{/course/add}" type="POST">
+
+
+<table class="app_table">
+	<thead>
+	<tr>
+		<th>选课ID</th>
+		<th>科目</th>
+		<th>老师</th>
+		<th>时间</th>
+	</tr>
+	</thead>
+
+
+	<tbody>
+
+	<tr th:each="subject:${subjects}">
+	<!--<td><input type="checkbox" name='cb1[]' value='c语言'/></td>-->
+		<td th:text="${subject.id}"></td>
+	<td th:text="${subject.name}">c语言</td>
+	<td th:text="${subject.teacher}">王丽萍</td>
+	<td th:text="${subject.time}">周四上午1-4节</td>
+	</tr>
+		<!--<td><a href="account.html"-->
+			   <!--th:href="@{|/accounts/${account.number}|}"-->
+			   <!--th:text="|${account.number}|">11111111</a></td>-->
+		<!--<td th:text="${account.owner}">Owner</td>-->
+		<!--<td th:text="${account.balance}">0</td>-->
+	<!--</tr>-->
+	</tbody>
+</table>
+	<input type="text" name="id" th:value="${id}" class="inputBox" placeholder="请输入课程ID"/>
+	<button type="submit" class="submit_button" value="添加">添加</button>
+<!--<button type="submit" class="submit_button" value="添加">添加</button>-->
+
+
+</form>
+	</center>
+
+</div>
+</div>
+</body>
+</html>
+
