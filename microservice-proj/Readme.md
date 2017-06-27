@@ -23,7 +23,7 @@ Java JDK 1.8，Maven 3，Docker，MongoDB，html5
 
 <h1>系统结构</h1>
 本系统结构图如下图所示，主要分为Discovery service、Student service、Subject service、Web service。核心服务为Student service和Subject service。
-![](spring-cloud-demo.png)
+![](4.png)
 
 Student Service
 主要包含学生表和学生选的课程的表，表设计如下：
