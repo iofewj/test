@@ -6,7 +6,7 @@ spring:
     name: student-server
   data:
       mongodb:
-        host: localhost
+        host: stu-mongo
         port: 27017
 
 eureka:

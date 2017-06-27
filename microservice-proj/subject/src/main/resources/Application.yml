@@ -6,8 +6,8 @@ spring:
     name: subject-server
   data:
     mongodb:
-      host: localhost
-      port: 27017
+      host: sub-mongo
+      port: 27016
 eureka:
   client:
     serviceUrl:
