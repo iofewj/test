@@ -17,7 +17,7 @@
 旨在通过完成这个项目学习Spring Cloud框架、Spring Boot框架，以及Docker的使用，来实现微服务架构的分布式系统。
 微服务与传统web开发方式相比，更适合实现敏捷开发和部署。基于微服务架构的分布式系统可以分成几个独立的模块，每个模块对应于一个服务，每个服务单独部署，为独立的业务开发，可以进行分布式的管理，开发效率更高。
 </h2>3.  开发环境</h2>
-Java JDK 1.8，Maven 3，Docker，MongoDB，html5
+Java JDK 1.8，Maven 3，MongoDB，html5
 
 
 
@@ -65,7 +65,8 @@ Discovery Service
 这是spring cloud项目中必需的一个服务，我们使用Eureka子项目来创建。
 每个服务必须注册在它上面，服务之间通过这个discovery server来互相发现。
 
-
+<h1>部署</h1>
+在docker中跑两个MongoDB，一个映射到端口27016取名sub-mongo，一个映射到端口27017取名stu-mongo。然后按顺序启动my_eureka、student、subject、webpage。
 <h1>结果展示</h1>
 登录页面
 
